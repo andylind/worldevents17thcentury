@@ -1,3 +1,5 @@
 worldevents17thcentury
 
 Uses google charts API to generate a map with hover text
+
+This is a single html page setup to be deployed to GAE
