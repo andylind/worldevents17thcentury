@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type='text/javascript' src='http://www.google.com/jsapi'></script>
+    <script type='text/javascript'>
+    google.load('visualization', '1', {'packages': ['geomap']});
+    google.setOnLoadCallback(drawMap);
+
+    function drawMap() {
+        var data = new google.visualization.DataTable();
+        data.addRows(24);
+        data.addColumn('string', 'Country');
+        data.addColumn('number', 'Year');
+        data.addColumn('string', 'HOVER');
+        data.addColumn('string', 'HOVER');
+
+        data.setValue(0, 0, 'Russia');
+        data.setValue(0, 1, 1601);
+        data.setValue(0, 2, 'Famine Kills 1/3 of Russia');
+
+        data.setValue(1, 0, 'Austria');
+        data.setValue(1, 1, 1606);
+        data.setValue(1, 2, 'Austria-War Ends with Turks');
+
+        data.setValue(2, 0, 'United Kingdom');
+        data.setValue(2, 1, 1616);
+        data.setValue(2, 2, 'U.K- Shakespeare Dies');
+
+        data.setValue(3, 0, 'Italy');
+        data.setValue(3, 1, 1626);
+        data.setValue(3, 2, 'Italy- Basilica Completed');
+
+        data.setValue(4, 0, 'Ireland');
+        data.setValue(4, 1, 1639);
+        data.setValue(4, 2, 'Ireland- Civil War Throughout');
+
+        data.setValue(5, 0, 'New Zealand');
+        data.setValue(5, 1, 1642);
+        data.setValue(5, 2, 'Europe Sites New Zealand');
+
+        data.setValue(6, 0, 'China');
+        data.setValue(6, 1, 1644);
+        data.setValue(6, 2, 'China- The Ming Dynasty Ends');
+
+        data.setValue(7, 0, 'Spain');
+        data.setValue(7, 1, 1647);
+        data.setValue(7, 2, 'Spain- The Great Plague');
+        
+        data.setValue(8, 0, 'South Africa');
+        data.setValue(8, 1, 1652);
+        data.setValue(8, 2, 'S. Africa- Cape Town founded');
+        
+        data.setValue(9, 0, 'India');
+        data.setValue(9, 1, 1658);
+        data.setValue(9, 2, 'India- Taj Mahal is Completed');
+   
+        data.setValue(10, 0, 'Turkey');
+        data.setValue(10, 1, 1667);
+        data.setValue(10, 2, 'Turkey- The Great Turkish War');  
+           
+        data.setValue(11, 0, 'France');
+        data.setValue(11, 1, 1693);
+        data.setValue(11, 2, 'France- Famine Kills 2 Million');        
+        
+        data.setValue(12, 0, 'Finland');
+        data.setValue(12, 1, 1696);
+        data.setValue(12, 2, 'Finland- Famine kills 1/3');        
+        
+        data.setValue(13, 0, 'Canada');
+        data.setValue(13, 1, 1700);
+        data.setValue(13, 2, 'Hudson Bay Co. Founded');        
+
+
+
+        data.setValue(14, 0, 'Egypt');
+        data.setValue(14, 1, 1617);
+        data.setValue(14, 2, 'Egypt - Mamluks regain power');
+
+        data.setValue(15, 0, 'Somalia');
+        data.setValue(15, 1, 1650);
+        data.setValue(15, 2, 'Somalia-Exports gold,wax,ivory');
+
+        data.setValue(16, 0, 'Ethiopia');
+        data.setValue(16, 1, 1632);
+        data.setValue(16, 2, 'Ethiopia - New State Religion');
+
+        data.setValue(17, 0, 'Madagascar');
+        data.setValue(17, 1, 1600);
+        data.setValue(17, 2, 'Madagascar - British Arrive');
+        
+        data.setValue(18, 0, 'Rwanda');
+        data.setValue(18, 1, 1624);
+        data.setValue(18, 2, 'Rwanda Kingdom founded');
+        
+        data.setValue(19, 0, 'Congo - Kinshasa');
+        data.setValue(19, 1, 1600);
+        data.setValue(19, 2, 'Kongo- Major source of slaves ');
+
+
+        data.setValue(20, 0, 'Zimbabwe');
+        data.setValue(20, 1, 1693);
+        data.setValue(20, 2, 'Zimbabwe- Portuguese leave');
+
+        data.setValue(21, 0, 'Mexico');
+        data.setValue(21, 1, 1632);
+        data.setValue(21, 2, 'Spanish Search for El Dorado');
+
+        data.setValue(22, 0, 'Venezuela');
+        data.setValue(22, 1, 1630);
+        data.setValue(22, 2, 'Venezuela- Disease Spreads');
+
+        data.setValue(23, 0, 'Peru');
+        data.setValue(23, 1, 1626);
+        data.setValue(23, 2, 'Peru- Conversion of Natives');
+
+
+
+
+
+
+
+
+        
+        var options = {};
+        options['dataMode'] = 'regions';
+        options['width'] = 900;
+        options['height'] = 580;
+        options['showLegend'] = false;
+        options['colors'] = [0xaa1155, 0x1155aa, 0x55aa11, 0xaa1155, 0x1155aa]; //orange colors
+
+          
+        var container = document.getElementById('map_canvas');
+        var geomap = new google.visualization.GeoMap(container);
+        geomap.draw(data, options);
+  
+    };
+
+  </script>
+</head>
+
+
+<body>
+<center>
+  <h1>World Events in the 17th Century</h1>
+  <div id='map_canvas'></div>
+  </center>
+</html>
+
